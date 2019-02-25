@@ -1,15 +1,16 @@
 # NodeJS Aliases
 function nvm-upgrade() { nvm install stable --reinstall-packages-from=`nvm current`; }
 ### npm
-alias npmr="npm run"
-alias npms="npm start"
-alias npmt="npm test"
+function n.local { (PATH=$(npm bin):$PATH; eval $@;) }
+alias n.run="npm run"
+alias n.star="npm start"
+alias n.pmt="npm test"
 ### npm-check-updates
-alias ncuu="ncu --upgradeAll"
-alias bcu="ncu -m bower"
-alias bcuu="ncu -m bower --upgradeAll"
+alias n.cuu="ncu --upgradeAll"
+alias n.bower="ncu -m bower"
+alias n.bu="ncu -m bower --upgradeAll"
 ### yarn
 alias y="yarn"
-alias ys="yarn start"
-alias yr="yarn run"
-alias yt="yarn test"
+alias y.st="yarn start"
+alias y.run="yarn run"
+alias y.test="yarn test"
